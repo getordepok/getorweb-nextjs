@@ -12,7 +12,10 @@ export default function NavItem({ href, scheme, children }) {
     <li>
       <a
         href={href}
-        className={classnames("text-lg transition font-semibold", pickedScheme)}
+        className={classnames(
+          "text-lg transition font-semibold p-3 rounded-full focus:outline-none focus:bg-indigo-500 focus:text-white",
+          pickedScheme
+        )}
       >
         {children}
       </a>
