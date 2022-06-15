@@ -6,7 +6,10 @@ import Nav from "./Nav";
 export default function Navbar() {
   return (
     <>
-      <div className="py-3 fixed w-full mx-auto top-0 z-10 backdrop-blur-lg shadow-md rounded-full ">
+      <div
+        id="navbar"
+        className="py-3 sticky w-full mx-auto font-mono font-semibold top-0 z-50 backdrop-blur-lg shadow-md rounded-b-3xl transition-all duration-300"
+      >
         <div className="flex justify-around items-center">
           <div className="w-3/12">
             <Logo />

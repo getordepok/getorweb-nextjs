@@ -12,22 +12,22 @@ const Slideshow = () => {
     scale: 1.1,
   };
   return (
-    <div className="bg-hero h-screen pl-10 pr-10 ">
-      <Zoom {...zoomInProperties}>
-        {images.map((each, index) => (
-          <div key={index} className="mt-32 pb-24 w-full">
-            <img
-              className="mx-auto rounded-xl shadow-2xl hover:shadow-indigo-500"
-              style={{
-                objectFit: "cover",
-                width: "90%",
-                height: "530px",
-              }}
-              src={each}
-            />
-          </div>
-        ))}
-      </Zoom>
+    <div className="pb-10 pt-5 bg-hero">
+      <div className="container mx-auto ">
+        <Zoom {...zoomInProperties}>
+          {images.map((each, index) => (
+            <div key={index} className="">
+              <img
+                className="mx-auto object-cover w-full rounded-2xl"
+                style={{
+                  height: "530px",
+                }}
+                src={each}
+              />
+            </div>
+          ))}
+        </Zoom>
+      </div>
     </div>
   );
 };
