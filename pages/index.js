@@ -7,8 +7,7 @@ import Navbar from "../components/Navbar/Navbar";
 // import SapaanPagi from "../components/SapaanPagi";
 import Slideshow from "../components/Slideshow";
 
-const YOUTUBE_PLAYLIST_ITEMS_API =
-  "https://www.googleapis.com/youtube/v3/playlistItems";
+const YOUTUBE_PLAYLIST_ITEMS_API = process.env.YOUTUBE_PLAYLIST_ITEMS_API;
 
 export async function getServerSideProps() {
   const res = await fetch(
@@ -50,7 +49,7 @@ export default function Home(data) {
               } = snippet;
               const { medium = {} } = thumbnails;
               const night = moment(publishedAt).format("a");
-              console.log(night, "night");
+              // console.log(night, "night");
               return (
                 <div key={id}>
                   <div className="p-4 m-4 bg-slate-100 shadow-md rounded-md hover:bg-white hover:scale-105 hover:shadow-indigo-500 transition-all border-t-indigo-500 border-t-4">
