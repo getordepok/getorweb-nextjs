@@ -6,7 +6,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Source Sans Pro", "ui-sans-serif", "system-ui"],
+        mono: ["IBM Plex Mono", "ui-monospace"],
+      },
+    },
   },
   plugins: [
     plugin(function ({ addUtilities }) {
