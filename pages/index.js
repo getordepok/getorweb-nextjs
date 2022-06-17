@@ -32,12 +32,12 @@ export default function Home(data) {
     <>
       <Navbar />
       <Slideshow />
-      <section>
-        <div className="container mx-auto flex flex-col mt-10 mb-10">
-          <h2 className="text-2xl font-semibold font-mono text-center">
+      <section className="container mx-auto">
+        <div className="mx-auto flex flex-col my-10">
+          <h2 className="text-2xl font-semibold font-mono text-center sm:text-lg">
             SAPAAN PAGI
           </h2>
-          <div className="flex flex-column flex-nowrap justify-around  mx-auto">
+          <div className="flex flex-col md:flex-row lg:flex-row justify-around mx-auto">
             {data.data.items.map((item) => {
               // console.log(item, "item");
               const { id, snippet = {} } = item;
