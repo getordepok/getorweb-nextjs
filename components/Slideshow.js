@@ -12,16 +12,16 @@ const Slideshow = () => {
     scale: 1.1,
   };
   return (
-    <div className="pb-10 pt-5 bg-hero">
+    <div className="pb-10 pt-5 bg-hero w-full">
       <div className="container mx-auto ">
         <Zoom {...zoomInProperties}>
           {images.map((each, index) => (
             <div key={index} className="">
               <img
-                className="mx-auto object-cover w-full rounded-2xl"
-                style={{
-                  height: "530px",
-                }}
+                className="mx-auto object-cover w-full rounded-2xl h-52 md:h-72 lg:h-96"
+                // style={{
+                //   height: "530px",
+                // }}
                 src={each}
               />
             </div>
