@@ -1,9 +1,10 @@
 import classnames from "classnames";
+import Button from "../Button";
 import NavItem from "./NavItem";
 
 export default function Nav({ scheme, dir }) {
   const dirs = {
-    horizontal: "justify-center space-x-10",
+    horizontal: "justify-center space-x-5 items-center",
     vertical: "flex-col space-y-6",
   };
 
@@ -12,17 +13,26 @@ export default function Nav({ scheme, dir }) {
   return (
     <ul className={classnames("flex", pickedDir)}>
       <NavItem scheme={scheme} href="#profile">
-        Profile
+        Sejarah
       </NavItem>
       <NavItem scheme={scheme} href="#skills">
-        Skills
+        Kegiatan
       </NavItem>
       <NavItem scheme={scheme} href="#projects">
-        Projects
+        Lapak Jemaat
       </NavItem>
       <NavItem scheme={scheme} href="#contact">
-        Contact
+        OIG
       </NavItem>
+      <NavItem scheme={scheme} href="#contact">
+        Lainnya
+      </NavItem>
+      <NavItem scheme={scheme} href="#contact">
+        Warta Jemaat
+      </NavItem>
+      <Button href="#contact" pill variant="outline-yellow">
+        HUBUNGI TU
+      </Button>
     </ul>
   );
 }
