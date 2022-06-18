@@ -3,6 +3,7 @@ import Head from "next/head";
 
 import { useEffect, useState } from "react";
 import Button from "../components/Button";
+import LiturgiKeluarga from "../components/LiturgiKeluarga";
 import Navbar from "../components/Navbar/Navbar";
 // import SapaanPagi from "../components/SapaanPagi";
 import Slideshow from "../components/Slideshow";
@@ -89,6 +90,7 @@ export default function Home(data) {
         </div>
       </section>
       <WartaJemaat />
+      <LiturgiKeluarga />
     </>
   );
 }
