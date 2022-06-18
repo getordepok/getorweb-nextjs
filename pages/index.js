@@ -87,6 +87,9 @@ export default function Home(data) {
           </Button>
         </div>
       </section>
+      <section>
+        <h1>delete soon</h1>
+      </section>
     </>
   );
 }
