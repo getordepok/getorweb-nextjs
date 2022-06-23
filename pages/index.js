@@ -2,6 +2,7 @@ import moment from "moment";
 import Head from "next/head";
 
 import { useEffect, useState } from "react";
+import Birthday from "../components/Birthday";
 import Button from "../components/Button";
 import LiturgiKeluarga from "../components/LiturgiKeluarga";
 import Navbar from "../components/Navbar/Navbar";
@@ -91,6 +92,7 @@ export default function Home(data) {
       </section>
       <WartaJemaat />
       <LiturgiKeluarga />
+      <Birthday />
     </>
   );
 }
