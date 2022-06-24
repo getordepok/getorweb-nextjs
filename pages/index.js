@@ -4,6 +4,7 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 import Birthday from "../components/Birthday";
 import Button from "../components/Button";
+import Information from "../components/Information";
 import LiturgiKeluarga from "../components/LiturgiKeluarga";
 import Navbar from "../components/Navbar/Navbar";
 // import SapaanPagi from "../components/SapaanPagi";
@@ -93,6 +94,7 @@ export default function Home(data) {
       <WartaJemaat />
       <LiturgiKeluarga />
       <Birthday />
+      <Information />
     </>
   );
 }
