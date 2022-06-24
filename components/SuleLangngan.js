@@ -1,39 +1,45 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const SuleLangngan = () => {
-  let mybutton = document.getElementById("btn-back-to-top");
+  const [isVisible, setIsVisible] = useState(false);
 
-  // When the user scrolls down 20px from the top of the document, show the button
-  window.onscroll = function () {
-    scrollFunction();
+  const toggleVisibility = () => {
+    if (window.pageYOffset > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
   };
 
-  function scrollFunction() {
-    if (
-      document.body.scrollTop > 20 ||
-      document.documentElement.scrollTop > 20
-    ) {
-      mybutton.style.display = "block";
-    } else {
-      mybutton.style.display = "none";
-    }
-  }
-  // When the user clicks on the button, scroll to the top of the document
-  mybutton.addEventListener("click", backToTop);
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
-  function backToTop() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
+  useEffect(() => {
+    window.addEventListener("scroll", toggleVisibility);
+
+    return () => {
+      window.removeEventListener("scroll", toggleVisibility);
+    };
+  }, []);
+
   return (
     <button
-      type="button"
-      data-mdb-ripple="true"
-      data-mdb-ripple-color="light"
-      className="inline-block p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out hidden bottom-5 right-5 fixed"
-      id="btn-back-to-top"
+      onClick={scrollToTop}
+      className={
+        isVisible
+          ? " p-3 text-white font-medium text-xs leading-tight uppercase  transition duration-150 ease-in-out  bottom-2 right-2 fixed flex flex-col items-center "
+          : "hidden"
+      }
     >
-      SULE LANGNGAN
+      <div class="w-16 overflow-hidden inline-block">
+        <div class=" h-11 w-11 bg-red-600 rotate-45 transform origin-bottom-left"></div>
+      </div>
+      <h4 className=" text-slate-800 text-sm font-medium">SULE</h4>
+      <h4 className=" text-slate-800 text-sm font-medium">LANGNGAN</h4>
     </button>
   );
 };

@@ -11,6 +11,7 @@ import Navbar from "../components/Navbar/Navbar";
 import Slideshow from "../components/Slideshow";
 import SuleLangngan from "../components/SuleLangngan";
 import WartaJemaat from "../components/WartaJemaat";
+import Footer from "../components/Footer";
 
 const YOUTUBE_PLAYLIST_ITEMS_API = process.env.YOUTUBE_PLAYLIST_ITEMS_API;
 
@@ -97,6 +98,7 @@ export default function Home(data) {
       <LiturgiKeluarga />
       <Birthday />
       <Information />
+      <Footer />
     </>
   );
 }
