@@ -3,7 +3,7 @@ import React from "react";
 const Information = () => {
   return (
     <section>
-      <div className="grid grid-cols-3 bg-white mx-10 mt-10">
+      <div className="grid grid-cols-3 bg-white mx-10 my-10">
         <div className="flex flex-col px-6  bg-slate-100 ">
           <h2 className="text-xl font-bold font-mono text-center">
             SEJARAH GEREJA TORAJA JEMAAT DEPOK
@@ -54,9 +54,9 @@ const Information = () => {
             JL. PEMUDA NO.62A, DEPOK, KEC. PANCORAN MAS, KOTA DEPOK, JAWA BARAT
             16431
           </p>
-          <h4 className="border-2 border-emerald-600 rounded-md text-center text-lg font-semibold my-1 mx-20">
+          <button className="border-2 border-emerald-600 rounded-md text-center text-lg font-semibold my-1 mx-20">
             KLIK MAPS
-          </h4>
+          </button>
         </div>
       </div>
     </section>

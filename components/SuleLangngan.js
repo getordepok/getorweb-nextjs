@@ -31,15 +31,15 @@ const SuleLangngan = () => {
       onClick={scrollToTop}
       className={
         isVisible
-          ? " p-3 text-white font-medium text-xs leading-tight uppercase  transition duration-150 ease-in-out  bottom-2 right-2 fixed flex flex-col items-center "
+          ? " p-3 text-white font-medium text-xs leading-tight uppercase  transition duration-150 ease-in-out  bottom-2 right-2 fixed flex flex-col items-center hover:animate-bounce"
           : "hidden"
       }
     >
       <div class="w-16 overflow-hidden inline-block">
         <div class=" h-11 w-11 bg-red-600 rotate-45 transform origin-bottom-left"></div>
       </div>
-      <h4 className=" text-slate-800 text-sm font-medium">SULE</h4>
-      <h4 className=" text-slate-800 text-sm font-medium">LANGNGAN</h4>
+      <h4 className=" text-black text-sm font-medium">SULE</h4>
+      <h4 className=" text-black text-sm font-medium">LANGNGAN</h4>
     </button>
   );
 };
