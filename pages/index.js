@@ -9,6 +9,7 @@ import LiturgiKeluarga from "../components/LiturgiKeluarga";
 import Navbar from "../components/Navbar/Navbar";
 // import SapaanPagi from "../components/SapaanPagi";
 import Slideshow from "../components/Slideshow";
+import SuleLangngan from "../components/SuleLangngan";
 import WartaJemaat from "../components/WartaJemaat";
 
 const YOUTUBE_PLAYLIST_ITEMS_API = process.env.YOUTUBE_PLAYLIST_ITEMS_API;
@@ -91,6 +92,7 @@ export default function Home(data) {
           </Button>
         </div>
       </section>
+      <SuleLangngan />
       <WartaJemaat />
       <LiturgiKeluarga />
       <Birthday />
