@@ -5,37 +5,52 @@ const Birthday = () => {
     {
       image: "images/rinto.jpg",
       name: "pnt. enov tikupasang",
-      age: "10",
-    },
-    {
-      image: "images/rinto.jpg",
-      name: "pnt. enov tikupasang",
       age: "1",
     },
     {
       image: "images/rinto.jpg",
       name: "pnt. enov tikupasang",
-      age: "30",
+      age: "2",
+    },
+    {
+      image: "images/rinto.jpg",
+      name: "pnt. enov tikupasang",
+      age: "3",
+    },
+    {
+      image: "images/rinto.jpg",
+      name: "pnt. enov tikupasang",
+      age: "4",
+    },
+    {
+      image: "images/rinto.jpg",
+      name: "pnt. enov tikupasang",
+      age: "5",
+    },
+    {
+      image: "images/rinto.jpg",
+      name: "pnt. enov tikupasang",
+      age: "6",
+    },
+    {
+      image: "images/rinto.jpg",
+      name: "pnt. enov tikupasang",
+      age: "7",
+    },
+    {
+      image: "images/rinto.jpg",
+      name: "pnt. enov tikupasang",
+      age: "8",
+    },
+    {
+      image: "images/rinto.jpg",
+      name: "pnt. enov tikupasang",
+      age: "9",
     },
     {
       image: "images/rinto.jpg",
       name: "pnt. enov tikupasang",
       age: "10",
-    },
-    {
-      image: "images/rinto.jpg",
-      name: "pnt. enov tikupasang",
-      age: "1",
-    },
-    {
-      image: "images/rinto.jpg",
-      name: "pnt. enov tikupasang",
-      age: "30",
-    },
-    {
-      image: "images/rinto.jpg",
-      name: "pnt. enov tikupasang",
-      age: "30",
     },
   ];
   return (
@@ -52,22 +67,24 @@ const Birthday = () => {
           SEGENAP MAJELIS GEREJA DAN ANGGOTA GERAJA TORAJA JEMAAT DEPOK
           MENGUCAPKAN SELAMAT ULANG TAHUN, TUHAN MEMBERKATI
         </h4>
-        <div className=" shadow-skill rounded-md p-6">
-          <div className="flex flex-wrap items-center justify-center mx-20 ">
+        <div className=" flex shadow-skill rounded-md p-6 items-center  justify-center align-middle">
+          {/* <div className="flex flex-wrap items-center justify-center mx-20 "> */}
+          <div className=" mx-2 overflow-x-scroll flex flex-row  h-auto">
             {warta.map((wrt) => {
               return (
-                <div className="bg-slate-100 mx-4 mt-5 max-h-50 max-w-10 w-40 flex flex-col justify-center items-center rounded-xl">
-                  <img
-                    src={wrt.image}
-                    className=" object-none rounded-t-xl max-h-50 max-w-10 w-40"
-                  />
-
-                  <h5 className="text-sm font-bold mt-1">
-                    {wrt.name.toUpperCase()}
-                  </h5>
-                  <p className="text-sm text-gray-400 font-semibold mt-1">
-                    {wrt.age} tahun
-                  </p>
+                <div className="  min-w-fit">
+                  <div className=" mx-3 mt-5 flex flex-col justify-center items-center rounded-xl   w-48">
+                    <img
+                      src={wrt.image}
+                      className="  object-cover rounded-t-xl  "
+                    />
+                    <h5 className="text-sm font-bold mt-1">
+                      {wrt.name.toUpperCase()}
+                    </h5>
+                    <p className="text-sm text-gray-400 font-semibold mt-1">
+                      {wrt.age} tahun
+                    </p>
+                  </div>
                 </div>
               );
             })}

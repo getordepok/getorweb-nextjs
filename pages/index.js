@@ -4,11 +4,14 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 import Birthday from "../components/Birthday";
 import Button from "../components/Button";
+import Information from "../components/Information";
 import LiturgiKeluarga from "../components/LiturgiKeluarga";
 import Navbar from "../components/Navbar/Navbar";
 // import SapaanPagi from "../components/SapaanPagi";
 import Slideshow from "../components/Slideshow";
+import SuleLangngan from "../components/SuleLangngan";
 import WartaJemaat from "../components/WartaJemaat";
+import Footer from "../components/Footer";
 
 const YOUTUBE_PLAYLIST_ITEMS_API = process.env.YOUTUBE_PLAYLIST_ITEMS_API;
 
@@ -90,9 +93,12 @@ export default function Home(data) {
           </Button>
         </div>
       </section>
+      <SuleLangngan />
       <WartaJemaat />
       <LiturgiKeluarga />
       <Birthday />
+      <Information />
+      <Footer />
     </>
   );
 }
