@@ -18,7 +18,7 @@ export default function Nav({ scheme, dir }) {
       <NavItem scheme={scheme} href="#skills">
         Kegiatan
       </NavItem>
-      <NavItem scheme={scheme} href="#projects">
+      <NavItem scheme={scheme} href="lapakjemaat">
         Lapak Jemaat
       </NavItem>
       <NavItem scheme={scheme} href="#contact">
