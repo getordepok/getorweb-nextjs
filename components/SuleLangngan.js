@@ -35,8 +35,8 @@ const SuleLangngan = () => {
           : "hidden"
       }
     >
-      <div class="w-16 overflow-hidden inline-block">
-        <div class=" h-11 w-11 bg-red-600 rotate-45 transform origin-bottom-left"></div>
+      <div className="w-16 overflow-hidden inline-block">
+        <div className=" h-11 w-11 bg-red-600 rotate-45 transform origin-bottom-left"></div>
       </div>
       <h4 className=" text-black text-sm font-medium">SULE</h4>
       <h4 className=" text-black text-sm font-medium">LANGNGAN</h4>

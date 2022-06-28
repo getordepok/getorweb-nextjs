@@ -8,9 +8,9 @@ const Lapaks = ({ color }) => {
   const [openTab, setOpenTab] = React.useState(1);
   const tabActive = {
     active:
-      "inline-block p-4 text-black  font-bold rounded-t-lg border-b-2 border-blue-600 active dark:text-black dark:border-blue-500",
+      "inline-block p-4 text-black text-xl font-mono font-bold rounded-t-lg border-b-2 border-blue-600 active dark:text-black dark:border-blue-500",
     nonactive:
-      "inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300",
+      "inline-block p-4 rounded-t-lg text-xl font-mono border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300",
     disable:
       "inline-block p-4 text-gray-400 rounded-t-lg cursor-not-allowed dark:text-gray-500",
   };
@@ -18,7 +18,6 @@ const Lapaks = ({ color }) => {
     if (tabs == openTab) return;
     else {
       setOpenTab(tabs);
-      console.log(openTab);
     }
   };
   const getLapaks = () => {
