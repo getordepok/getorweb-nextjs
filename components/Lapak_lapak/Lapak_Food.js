@@ -50,24 +50,24 @@ const Lapak_Food = () => {
           return (
             <div
               key={food.key}
-              className="bg-white mx-2 flex flex-col justify-center items-center rounded-xl shadow-md my-2 "
+              className='bg-white mx-2 flex flex-col justify-center items-center rounded-xl shadow-md my-2 '
             >
               <img
                 alt={food.contact}
                 src={food.image}
-                className="object-fill rounded-t-xl max-h-40 w-80"
+                className='object-fill rounded-t-xl max-h-40 w-80'
               />
-              <h4 className="text-lg font-semibold">{food.menu}</h4>
-              <h4 className="text-lg font-semibold">{food.price}</h4>
-              <h4 className="text-lg font-semibold">LAPAK: {food.seller}</h4>
+              <h4 className='text-lg font-semibold'>{food.menu}</h4>
+              <h4 className='text-lg font-semibold'>{food.price}</h4>
+              <h4 className='text-lg font-semibold'>LAPAK: {food.seller}</h4>
               <button
                 title={food.contact}
-                type="button"
-                class="text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center  mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900"
+                type='button'
+                className='text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center  mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900'
               >
                 HUBUNGI PENJUAL
               </button>
-              <p className="text-sm text-gray-400 font-semibold mt-1">
+              <p className='text-sm text-gray-400 font-semibold mt-1'>
                 {food.date}
               </p>
             </div>
