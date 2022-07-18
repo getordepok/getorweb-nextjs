@@ -12,6 +12,7 @@ import Slideshow from "../components/Slideshow";
 import SuleLangngan from "../components/SuleLangngan";
 import WartaJemaat from "../components/WartaJemaat";
 import Footer from "../components/Footer";
+import SapaanPagi from "../components/SapaanPagi";
 
 const YOUTUBE_PLAYLIST_ITEMS_API = process.env.YOUTUBE_PLAYLIST_ITEMS_API;
 
@@ -19,6 +20,7 @@ export async function getServerSideProps() {
   const res = await fetch(
     `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLtSVHs98fMyGeZF_I6LW_kFJmj4LMKBt8&maxResults=4&key=${process.env.YOUTUBE_API_KEY}`
   );
+
   const data = await res.json();
   return {
     props: {
@@ -26,8 +28,7 @@ export async function getServerSideProps() {
     },
   };
 }
-export default function Home(data) {
-  // const youtubeList = data;
+export default function Home(dataSapaan = { data }) {
   useEffect(() => {
     window.addEventListener("scroll", () => {
       let header = document.getElementById("navbar");
@@ -38,61 +39,7 @@ export default function Home(data) {
     <>
       <Navbar />
       <Slideshow />
-      <section className="container mx-auto">
-        <div className="mx-auto flex flex-col my-10">
-          <h2 className="text-2xl font-semibold font-mono text-center sm:text-lg">
-            SAPAAN PAGI
-          </h2>
-          <div className="flex flex-col md:flex-row lg:flex-row justify-around mx-auto">
-            {data.data.items.map((item) => {
-              // console.log(item, "item");
-              const { id, snippet = {} } = item;
-              const {
-                title,
-                thumbnails,
-                publishedAt = {},
-                resourceId,
-              } = snippet;
-              const { medium = {} } = thumbnails;
-              const night = moment(publishedAt).format("a");
-              // console.log(night, "night");
-              return (
-                <div key={id}>
-                  <div className="p-4 m-4 bg-slate-100 shadow-md rounded-md hover:bg-white hover:scale-105 hover:shadow-indigo-500 transition-all border-t-indigo-500 border-t-4">
-                    <a
-                      href={`https://www.youtube.com/watch?v=${resourceId.videoId}`}
-                    >
-                      <img
-                        src={medium.url}
-                        width={medium.width}
-                        height={medium.height}
-                        alt=""
-                      />
-                      <p className="mt-3 font-semibold border-b-2">{title}</p>
-                      <p className="mt-t text-gray-600">
-                        {night === "pm"
-                          ? moment(publishedAt)
-                              .add(1, "day")
-                              .format("dddd, DD MMMM YYYY")
-                          : moment(publishedAt).format("dddd, DD MMMM YYYY")}
-                      </p>
-                    </a>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          <Button
-            href="#contact"
-            pill
-            variant="outline-yellow"
-            className="w-6/12 mx-auto text-center transition-all border-2"
-          >
-            LIHAT SEMUA VIDEO
-          </Button>
-        </div>
-      </section>
+      <SapaanPagi dataSapaan={dataSapaan.data} />
       <SuleLangngan />
       <WartaJemaat />
       <LiturgiKeluarga />

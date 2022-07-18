@@ -9,20 +9,18 @@ const Slideshow = () => {
 
   const zoomInProperties = {
     indicators: true,
-    scale: 1.1,
+    // scale: 1.1,
   };
   return (
-    <div className="pb-10 pt-5 bg-hero w-full">
-      <div className="container mx-auto ">
-        <Zoom {...zoomInProperties}>
+    <div className='p-10 w-full bg-gradient-to-r from-cyan-100 to-indigo-100'>
+      <div className='mx-auto container w-10/12'>
+        <Zoom {...zoomInProperties} className='rounded-3xl border bg-white p-5'>
           {images.map((each, index) => (
-            <div key={index} className="">
+            <div key={index} className='object-fill'>
               <img
-                className="mx-auto object-cover w-full rounded-2xl h-52 md:h-72 lg:h-96"
-                // style={{
-                //   height: "530px",
-                // }}
+                className=' w-full h-52 md:h-72 lg:h-96'
                 src={each}
+                height='500px'
               />
             </div>
           ))}

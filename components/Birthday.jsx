@@ -65,7 +65,7 @@ const Birthday = () => {
   ];
   return (
     <section>
-      <div className=' bg-slate-100 mx-10 mt-10'>
+      <div className=' bg-slate-100 mt-10'>
         <h1 className='text-2xl font-semibold font-mono text-center'>
           JEMAAT YANG BERULANG TAHUN HARI INI
         </h1>
